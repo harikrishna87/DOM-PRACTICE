@@ -25,7 +25,7 @@ let data = [
     },
     {
       "id": 3,
-      "title": "Mens Cotton Jacket",
+      "title": "Mens Premium Cotton Jacket Slim Fit",
       "price": 55.99,
       "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
       "category": "men's clothing",
@@ -37,7 +37,7 @@ let data = [
     },
     {
       "id": 4,
-      "title": "Mens Casual Slim Fit",
+      "title": "Mens Premium Casual T-Shirt Slim Fit",
       "price": 15.99,
       "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
       "category": "men's clothing",
@@ -49,7 +49,7 @@ let data = [
     },
     {
       "id": 5,
-      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "title": "John Hardy Women's Gold & Silver Dragon Station Chain Bracelet",
       "price": 695,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "jewelery",
@@ -61,7 +61,7 @@ let data = [
     },
     {
       "id": 6,
-      "title": "Solid Gold Petite Micropave ",
+      "title": "Women's Solid 24Crt Gold Petite Micropave ",
       "price": 168,
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
       "category": "jewelery",
@@ -73,7 +73,7 @@ let data = [
     },
     {
       "id": 7,
-      "title": "White Gold Plated Princess",
+      "title": "Women's Solid White Gold Plated Princess",
       "price": 9.99,
       "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
       "category": "jewelery",
@@ -121,7 +121,7 @@ let data = [
     },
     {
       "id": 11,
-      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Boost SATA III 2.5",
       "price": 109,
       "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
       "category": "electronics",
@@ -133,7 +133,7 @@ let data = [
     },
     {
       "id": 12,
-      "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+      "title": "WD 4TB Gaming Drive Works with Playstation 4",
       "price": 114,
       "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
       "category": "electronics",
@@ -157,7 +157,7 @@ let data = [
     },
     {
       "id": 14,
-      "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+      "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor ",
       "price": 999.99,
       "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
       "category": "electronics",
@@ -181,7 +181,7 @@ let data = [
     },
     {
       "id": 16,
-      "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      "title": "Lock and Love Women's Removable Hooded Moto Biker Jacket",
       "price": 29.95,
       "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
       "category": "women's clothing",
@@ -265,7 +265,7 @@ let data = [
                                 <p style="font-size: 20px;">Price: $${data[i].price}</p>
                                 <button style="padding: 10px 20px; background-color: white;
                                                color: red; font-size: 17px; font-weight: 700; border: none; border-radius: 5px; cursor: pointer;" 
-                                               onclick="showPopup()">
+                                               onclick="Popup()">
                                     Buy Now
                                 </button>
                             </div>
@@ -274,23 +274,32 @@ let data = [
     }
 }
 
-function showPopup() {
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('overlay');
+// function showPopup() {
+//     const popup = document.getElementById('popup');
+//     const overlay = document.getElementById('overlay');
 
-    popup.classList.add('active');
-    overlay.classList.add('active');
-}
+//     popup.classList.add('active');
+//     overlay.classList.add('active');
+// }
 
-function closePopup() {
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('overlay');
-    popup.classList.remove('active');
-    overlay.classList.remove('active');
-}
+// function closePopup() {
+//     const popup = document.getElementById('popup');
+//     const overlay = document.getElementById('overlay');
+//     popup.classList.remove('active');
+//     overlay.classList.remove('active');
+// }
 
 function Popup() {
-  let name = document.getElementById('my-popover');
-  name.classList.add('active');
+  let popover = document.getElementById('my-popover');
+  popover.classList.add('active');
+
+  setTimeout(function() {
+    popover.classList.remove('active');
+  }, 5000)
+}
+
+function Popout() {
+  let popover = document.getElementById('my-popover');
+  popover.classList.remove('active');
 }
 
