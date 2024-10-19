@@ -1,75 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-         #my-popover, #my-popover1, #my-popover2{
-            width: 500px;
-            background-color: white;
-            color: black;
-            padding: 30px;
-            border: 2px solid green;
-            border-radius: 12px;
-            outline: none;
-            text-align: center;
-            box-shadow: 2px 2px 10px lightgray;
-        }
-        #my-popover.active, #my-popover1.active, #my-popover2.active{
-            display: block;
-        }
-        .close-btn {
-            background: green;
-            border: 2px solid white;
-            border-radius: 12px;
-            padding: 10px 30px;
-            color: White;
-            font-size: 20px;
-            cursor: pointer;
-            float: right;
-            margin: 10px;
-        }
-        .close-btn1 {
-            background: red;
-            border: 2px solid white;
-            border-radius: 12px;
-            padding: 10px 30px;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            float: right;
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Product Details:</h1>
-    <button onclick="hello()">See More</button>
+    <button onclick="hello()" class="btn">See More</button>
     <div id="name" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
  gap: 30px; margin-top: 30px;"></div>
 
-<div id="my-popover" popover>
-    <img src="./Images/cart.png" alt="" width="150" height="150">
-    <h1 style="padding: 0; font-size: 30px; color: blueviolet;">Do You Want To Buy This Product!!</h1>
-    <button class="close-btn" onclick="confirmAction()" onclick="Popout()">Confirm</button>
-    <button class="close-btn1" onclick="Cancel()">Cancel</button>
-</div>
+    <div id="my-popover" popover>
+        <img src="./Images/cart.png" alt="" width="100" height="100">
+        <h1 style="padding: 0; font-size: 30px; color: blueviolet;">Do You Want To Buy This Product!!</h1>
+        <button class="close-btn" onclick="confirmAction()">Confirm</button>
+        <button class="close-btn1" onclick="Cancel()">Cancel</button>
+    </div>
 
-<div id="my-popover1" popover>
-    <img src="./Images/warning.png" alt="" width="150" height="150">
-    <h1 style="padding: 0; font-size: 30px; color: black">Do You Want to Cancel the Purchase!!</h1>
-    <h2>Thank You &#128148; </h2> 
-    <h2> Please Visit Again!!</h2>
-</div>
+    <div id="my-popover1" popover>
+        <img src="./Images/warning.png" alt="" width="100" height="100">
+        <h1 style="padding: 0; font-size: 30px; color: black">Do to Unexpected Reasons...</h1>
+        <h2 style="font-size: 20px;">Your Purchase Was Cancelled &#128148; </h2>
+        <h2> Please Visit Again!!</h2>
+    </div>
 
-<div id="my-popover2" popover>
-    <img src="./Images/mark.png" alt="" width="150" height="150">
-    <h1 style="padding: 0; font-size: 30px; color: aqua;">You are Successfully Purchased this Product!!</h1>
-    <h2>Thank You &#129309; Please Visit Again!!</h2>
-    <button class="close-btn" onclick="Popinout()">Okay!</button>
-</div>
+    <div id="my-popover2" popover>
+        <img src="./Images/mark.png" alt="" width="100" height="100">
+        <h1 style="padding: 0; font-size: 30px; color: aqua;">You are Successfully Purchased this Product!!</h1>
+        <h2>Thank You &#129309; Please Visit Again!!</h2>
+        <button class="close-btn" onclick="Popinout()">Okay!</button>
+    </div>
+
+    <div id="my-popover3" popover>
+        <img src="./Images/warning.png" alt="" width="100" height="100">
+        <h1 style="padding: 0; font-size: 30px; color: green;">Error!!!</h1>
+        <h2>Your are Already Loaded the data...</h2>
+        <h2 style="font-size: 35px;">Sorry!!&#128148;</h2>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>

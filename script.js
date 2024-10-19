@@ -276,7 +276,8 @@ function hello() {
     is_loaded = true;
   }
   else {
-    alert("Your are already loaded the Data!")
+    // alert("Your are already loaded the Data!")
+    popin();
   }
 }
 
@@ -306,16 +307,29 @@ function Popover() {
   popover.classList.add('active');
   setTimeout(function () {
     popover.classList.remove('active');
-  }, 2000)
+  }, 6000)
 }
 
 function Popin() {
   let popover = document.getElementById('my-popover2');
   popover.classList.add('active');
+
+  setTimeout(function () {
+    popover.classList.remove('active');
+  }, 10000)
 }
 function Popinout() {
   let popover = document.getElementById('my-popover2');
   popover.classList.remove('active');
+}
+
+function popin() {
+  let popover = document.getElementById('my-popover3');
+  popover.classList.add('active')
+
+  setTimeout(function () {
+    popover.classList.remove('active');
+  }, 5000)
 }
 
 
