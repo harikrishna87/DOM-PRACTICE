@@ -284,9 +284,20 @@ function hello() {
 function confirmAction() {
   Popout();
 
+  confirm();
+}
+
+function action () {
+  cancel_product();
+
   Popin();
 }
 
+function canncel() {
+  cancel_product();
+  
+  Popover();
+}
 function Cancel() {
   Popout();
 
@@ -330,6 +341,16 @@ function popin() {
   setTimeout(function () {
     popover.classList.remove('active');
   }, 5000)
+}
+
+function confirm() {
+  let popover = document.getElementById('my-popover4');
+  popover.classList.add('active')
+}
+
+function cancel_product() {
+  let popover = document.getElementById('my-popover4');
+  popover.classList.remove('active');
 }
 
 

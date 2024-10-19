@@ -1,7 +1,8 @@
 #my-popover,
 #my-popover1,
 #my-popover2,
-#my-popover3{
+#my-popover3,
+#my-popover4 {
     width: 500px;
     background-color: white;
     color: black;
@@ -17,7 +18,8 @@
 #my-popover.active,
 #my-popover1.active,
 #my-popover2.active,
-#my-popover3.active{
+#my-popover3.active,
+#my-popover4.active{
     display: block;
 }
 
@@ -55,12 +57,12 @@
     font-weight: 600;
     cursor: pointer;
 }
-#my-popover .close-btn {
+#my-popover .close-btn, #my-popover4 .close-btn {
     opacity: 0;
     transform: translateY(10px);
     animation: fadeUp 2s ease-in-out forwards 2s;
 }
-#my-popover .close-btn1 {
+#my-popover .close-btn1, #my-popover4 .close-btn1 {
     opacity: 0;
     transform: translateY(10px);
     animation: fadeUp 2s ease-in-out forwards 3s;
@@ -95,7 +97,7 @@
         transform: translateY(0);
     }
 }
-#my-popover1 h2 , #my-popover3 h2{
+#my-popover1 h2 , #my-popover3 h2, #my-popover4 h2{
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 2s ease-in-out forwards 1s;
@@ -205,5 +207,41 @@
     }
     50% {
         transform: translateY(-5px);
+    }
+}
+
+#my-popover4 h2{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#my-popover4 h1{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 2s ease-in-out forwards 1s;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
